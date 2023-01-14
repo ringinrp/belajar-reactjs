@@ -4,14 +4,27 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
 const App = () => {
+  const navHeading = "Navigation Bar";
+  const navText = "Sosmed";
+
+  const clicked = () => {
+    return alert("button dipencet !!!");
+  };
+
+  const paragraph = () =>{
+    return (
+      <i>Mantap cuy !!</i>
+    );
+  };
+
   return (
     <div className="App">
-      <Navbar />
+      <Navbar navText={navText} navHeading={navHeading}/>
       haii
-      <MyButton />
-      <Footer />
+      <MyButton clicked={clicked} />
+      <Footer paragraph={paragraph}/>
     </div>
   );
-}
+};
 
 export default App;
